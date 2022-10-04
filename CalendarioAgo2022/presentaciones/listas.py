@@ -13,6 +13,7 @@ def main():
         lista = crea_lista(t)
         print(lista)
     else:
-        print("Imposible")
+        print("Tamaño de lista inválido")
         
 main()
+
