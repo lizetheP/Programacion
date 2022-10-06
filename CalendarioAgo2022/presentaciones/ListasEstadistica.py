@@ -1,17 +1,24 @@
 # importo biblioteca numpy para máximo, mínimo
 import numpy as np
-# importo biblioteca statistics para media, mediana, moda, desviación
+# importo biblioteca statistics para media, mediana, moda, desviación estándar
 import statistics
-
 pesos = [70, 69.5, 71, 69, 70, 68.5, 68]
 # Despliego el máximo
-print("Máximo = ", np.max(pesos))
+maximo = np.max(pesos)
+print("Máximo = ", maximo)
 # Despliego el mínimo
-print("Mínimo = ", np.min(pesos))
+minimo = np.min(pesos)
+print("Mínimo = ", minimo)
 
 # Despliego el promedio
-print("Promedio = %.2f" % statistics.mean(pesos))
+promedio = statistics.mean(pesos)
+print("Promedio = %.2f" % promedio)
 # Despliego la mediana
-print("Mediana = %.2f" % statistics.median(pesos))
+mediana = statistics.median(pesos)
+print("Mediana = %.2f" % mediana)
 # Despliego la moda
-print("Moda = %.2f" % statistics.mode(pesos))
+moda = statistics.mode(pesos)
+print("Moda = %.2f" % moda)
+# Despliego la desviación estándar
+desviacion = statistics.stdev(pesos)
+print("Desviación estandar = %.2f" % desviacion)
