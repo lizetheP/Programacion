@@ -2,7 +2,7 @@ def crea_lista(tam):
     contador = 1
     lista = []
     while contador <= tam:
-        numero = int(input("Dame un número: "))
+        numero = float(input("Dame un número: "))
         lista.append(numero)
         contador = contador + 1
     return lista
