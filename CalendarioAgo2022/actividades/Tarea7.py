@@ -3,23 +3,23 @@ import matplotlib.pyplot as plt
 #import openpyxl
 
 informe = pd.read_excel("ChartData.xlsx")
-print(informe)
+#print(informe)
 
 valoresCierre = informe["Close/Price"]
-print(valoresCierre)
+#print(valoresCierre)
 promedio = valoresCierre.mean()
 print("Promedio del valor de las acciones al final del día: %.2f" % promedio)
 
 cantidad = informe["Volume"]
-print(cantidad)
+#print(cantidad)
 minimo = cantidad.min()
 print("La cantidad de transacciones mínima en un día fue: %.2f" % minimo)
 
 fechas = informe["Date"]
-print(fechas)
+#print(fechas)
 volumen = informe["Volume"]
-print(volumen)
-"""
+#print(volumen)
+
 plt.title("Cantidad de transacciones por día")
 plt.xlabel("Fechas")
 plt.ylabel("Cantidad de transacciones")
@@ -32,7 +32,7 @@ plt.xlabel("Fechas")
 plt.ylabel("Valor de las acciones al final del día")
 plt.plot(fechas, cantidad, "rD-.")
 plt.show()
-"""
+
 reporte.groupby("REGION").get_group("NORTE")
 print(reporteNorte)
 

@@ -1,5 +1,5 @@
 import pandas as pd
-#import openpyxl
+import openpyxl
 
 tabla = pd.read_excel("vendedores.xlsx")
 print(tabla)
