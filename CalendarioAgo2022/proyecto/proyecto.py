@@ -13,6 +13,7 @@ def main():
     continua = True
     # Crear Dataframe del archivo de Excel
     password = "Xmen24*" # Definir un password de entrada
+    comprueba_clave(password)
     while continua == True:
         menu()
         comprueba_clave(password) 
