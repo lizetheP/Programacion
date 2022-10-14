@@ -16,10 +16,8 @@ def main():
     comprueba_clave(password)
     while continua == True:
         menu()
-        comprueba_clave(password) 
         opcion = input("Introduce una opcion: ")
-        opcion = opcion.lower()
-        if opcion == 'a':
+        if opcion == 1:
             print("Hola a todos")
         elif opcion == 's':
             print("Adios")
