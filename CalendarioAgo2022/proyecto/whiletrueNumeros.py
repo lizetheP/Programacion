@@ -17,14 +17,14 @@ def comprueba_clave(password):
 
 def main():    
     continua = True
-    
+   # tablero = Dataframe
     password = "12345"
     comprueba_clave(password)
     while continua == True:
         menu()
         opcion = int (input("Introduce una opcion: "))
         if opcion == 1:
-            print("Hola a todos")
+            estadistica_descriptiva(tablero)
         elif opcion == 2:
             print("Adios")
             continua = False
