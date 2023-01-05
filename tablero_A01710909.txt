@@ -1,0 +1,29 @@
+print("Isabella Medina A01710909")
+import pandas as pd
+import openpyxl
+import matplotlib.pyplot as plt
+
+tabla = pd.read_excel("ChartData.xlsx")
+
+valoresCierre = tabla["Close/Price"]
+print(valoresCierre)
+promedio = valoresCierre.mean()
+print("Promedio del valor de acciones al final del dia es: %.2f" % promedio)
+
+cantidad = tabla["Volume"]
+print(cantidad)
+cantidadMin = cantidad.min()
+print(cantidadMin)
+print("Cantidad de transacciones mínimas en un día fue: %.1f" % cantidadMin)
+
+fecha = tabla["Date"]
+print(fecha)
+
+barlist =  plt.plot (fecha, cantidad,"g-")
+
+plt.title("UNITED")
+plt.xlabel("Cantidad")
+plt.ylabel("Valor de las acciones en el cierre")
+plt.xticks(rotation = 45)
+plt.show()
+
