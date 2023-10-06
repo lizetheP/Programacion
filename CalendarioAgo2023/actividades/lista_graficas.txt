@@ -1,0 +1,77 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+import statistics
+
+# Estadística descriptiva
+# --------------------------------------------------------------------------
+pesos = [70, 69.5, 71, 69, 70, 68.5, 68]
+maximo = np.max(pesos)
+minimo = np.min(pesos)
+promedio = statistics.mean(pesos)
+mediana = statistics.median(pesos)
+moda = statistics.mode(pesos)
+desviacion = statistics.stdev(pesos)
+print("Máximo = %i" % maximo)
+print("Mínimo = %i" % minimo)
+print("Promedio = %.2f" % promedio)
+print("Mediana = %.2f" % mediana)
+print("Moda = %.2f" % moda)
+print("Desviación estándar = %.2f" % desviacion)
+
+# Gráfica de barras
+# --------------------------------------------------------------------------
+paises = ["Estados Unidos", "España", "México", "Rusia", "Japón"]
+ventas = [25, 32.34, 20, 25]
+plt.bar(paises, ventas)
+plt.show()
+
+# Gráfica línea simple
+# --------------------------------------------------------------------------
+ejex = ["SON", "BC", "NL", "JAL", "PUE", "CHIH"]
+ejey = [3, 2.3, 4, 4, 7, 5]
+plt.title("Promedios año 2023")
+plt.xlabel("Estados")
+plt.ylabel("Promedio")
+plt.plot(ejex, ejey)
+plt.show()
+
+# Gráfica con dos líneas
+# --------------------------------------------------------------------------
+estados = ["Oaxaca", "Veracruz", "Puebla", "Chihuahua", "Chiapas", "Sonora"]
+contingencias = [1002, 27, 567, 288, 108, 211]
+emergencias = [5868, 5087, 1608, 1646, 1655, 1231]
+
+plt.title("Situaciones de emergencia y contingencia 2023")
+plt.xlabel("Contingencias climatológicas")
+plt.ylabel("Emergencias / Desastres")
+plt.plot(estados, contingencias, "rP-.", estados, emergencias, "b>-")
+plt.legend(["Contingencias", "Emergencias"])
+plt.show()
+
+# Dos gráficas
+# --------------------------------------------------------------------------
+x = ["peras", "manzanas", "plátanos"]
+y1 = [1,5,3]
+y2 = [-4, 3, 6]
+
+#Divide la pantalla en 1 renglón, 2 columnas e inicio en el cuadrante 1
+plt.subplot(121)
+plt.title("Este mes")
+plt.xlabel("Frutas")
+plt.ylabel("Cantidad")
+plt.plot(x, y1, "g*:")
+
+#Divide la pantalla en 1 renglón, 2 columnas e inicio en el cuadrante 2
+plt.subplot(122)
+plt.title("Mes anterior")
+plt.xlabel("Frutas")
+plt.ylabel("Cantidad")
+plt.plot(x, y2, "b<-")
+plt.show()
+
+# Laboratorio
+# --------------------------------------------------------------------------
+meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre"]
+dolar = [19.36, 18.89, 18.01, 18.11, 17.91, 17.51, 17.05, 17.29, 17.18]
+euro =  [20.53, 20.65, 19.12, 19.68, 19.76, 18.85, 18.60, 18.90, 18.52]
