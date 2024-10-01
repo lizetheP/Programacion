@@ -3,9 +3,12 @@ import matplotlib.pyplot as plt
 import pandas as pd
 import statistics
 
-# Estadística descriptiva
-# --------------------------------------------------------------------------
+# -------------------------------------------------------------------
+# --------- Estadística descriptiva ---------------------------------
+# -------------------------------------------------------------------
+
 pesos = [70, 69.5, 71, 69, 70, 68.5, 68]
+
 maximo = np.max(pesos)
 minimo = np.min(pesos)
 promedio = statistics.mean(pesos)
@@ -19,59 +22,133 @@ print("Mediana = %.2f" % mediana)
 print("Moda = %.2f" % moda)
 print("Desviación estándar = %.2f" % desviacion)
 
-# Gráfica de barras
-# --------------------------------------------------------------------------
-paises = ["Estados Unidos", "España", "México", "Rusia", "Japón"]
-ventas = [25, 32.34, 20, 25]
+# -------------------------------------------------------------------
+# -------- Gráfica de barras simple ---------------------------------
+# -------------------------------------------------------------------
+
+# Librerías
+import matplotlib.pyplot as plt
+
+# Valores eje X
+paises = ["Estados unidos", "España", "México", "Rusia", "Japón"]
+
+# Valores eje Y
+ventas = [25, 32, 34, 20, 25]
+
+# Graficando
 plt.bar(paises, ventas)
+
+# Mostrando el gráfico
 plt.show()
 
-# Gráfica línea simple
-# --------------------------------------------------------------------------
+# -------------------------------------------------------------------
+# -------- Gráfica de barras con colores ----------------------------
+# -------------------------------------------------------------------
+
+# Librerías
+import matplotlib.pyplot as plt
+
+# Valores eje X
+paises = ["Estados unidos", "España", "México", "Rusia", "Japón"]
+
+# Valores eje Y
+ventas = [25, 32, 34, 20, 25]
+
+# Graficando
+barras = plt.bar(paises, ventas)
+
+# Colocando colores a las barras
+barras[0].set_color('b')
+barras[1].set_color('g')
+barras[2].set_color('r')
+barras[3].set_color('c')
+barras[4].set_color('m')
+
+# Mostrando el gráfico
+plt.show()
+
+# -------------------------------------------------------------------
+# ---- Gráfica de línea simple con título y nombre de los ejes ------
+# -------------------------------------------------------------------
+
+# Librerías
+import matplotlib.pyplot as plt
+
+# Valores de los ejes
 ejex = ["SON", "BC", "NL", "JAL", "PUE", "CHIH"]
 ejey = [3, 2.3, 4, 4, 7, 5]
-plt.title("Promedios año 2023")
+
+# Título del gráfico
+plt.title("Promedios año 2024")
+
+# Títulos de los ejes
 plt.xlabel("Estados")
 plt.ylabel("Promedio")
+
+# Graficando
 plt.plot(ejex, ejey)
+
+# Mostrando el gráfico
 plt.show()
 
-# Gráfica con dos líneas
-# --------------------------------------------------------------------------
+# -------------------------------------------------------------------
+# -------- Gráfica con dos líneas -----------------------------------
+# -------------------------------------------------------------------
+
+import matplotlib.pyplot as plt
+
 estados = ["Oaxaca", "Veracruz", "Puebla", "Chihuahua", "Chiapas", "Sonora"]
-contingencias = [1002, 27, 567, 288, 108, 211]
+contingencias = [1002, 271, 567, 288, 108, 211]
 emergencias = [5868, 5087, 1608, 1646, 1655, 1231]
 
-plt.title("Situaciones de emergencia y contingencia 2023")
+plt.title("Situaciones de emergencia y contingencia 2024")
 plt.xlabel("Contingencias climatológicas")
 plt.ylabel("Emergencias / Desastres")
-plt.plot(estados, contingencias, "rP-.", estados, emergencias, "b>-")
+
+plt.plot(estados, contingencias, "g*", estados, emergencias, "b>-") 
 plt.legend(["Contingencias", "Emergencias"])
+
+#Rotación 45 grados de etiquetas en el eje x
+#plt.xticks(rotation = 45)
+
 plt.show()
 
-# Dos gráficas
-# --------------------------------------------------------------------------
+# -------------------------------------------------------------------
+# -------- Varias gráficas en un tablero ----------------------------
+# -------------------------------------------------------------------
+
+import matplotlib.pyplot as plt
 x = ["peras", "manzanas", "plátanos"]
 y1 = [1,5,3]
 y2 = [-4, 3, 6]
 
 #Divide la pantalla en 1 renglón, 2 columnas e inicio en el cuadrante 1
 plt.subplot(121)
-plt.title("Este mes")
 plt.xlabel("Frutas")
 plt.ylabel("Cantidad")
+plt.title("Este mes")
+#plt.xticks(rotation=15)
 plt.plot(x, y1, "g*:")
 
 #Divide la pantalla en 1 renglón, 2 columnas e inicio en el cuadrante 2
 plt.subplot(122)
-plt.title("Mes anterior")
 plt.xlabel("Frutas")
 plt.ylabel("Cantidad")
+plt.title("Mes anterior")
+#plt.xticks(rotation=15)
 plt.plot(x, y2, "b<-")
 plt.show()
 
-# Laboratorio
-# --------------------------------------------------------------------------
+# -------------------------------------------------------------------
+# -------- Laboratorio ----------------------------------------------
+# -------------------------------------------------------------------
+
 meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre"]
-dolar = [19.36, 18.89, 18.01, 18.11, 17.91, 17.51, 17.05, 17.29, 17.18]
-euro =  [20.53, 20.65, 19.12, 19.68, 19.76, 18.85, 18.60, 18.90, 18.52]
+dolar = [16.90, 17.04, 16.72, 16.71, 16.68, 18.46, 17.73, 18.65, 19.16]
+euro =  [18.50, 18.36, 18.20, 17.75, 18.17, 19.76, 19.32, 20.46, 21.25]
+
+#https://wise.com/mx/currency-converter/usd-to-mxn-rate?amount=1000
+#https://wise.com/mx/currency-converter/eur-to-mxn-rate?amount=1000
+
+
+
