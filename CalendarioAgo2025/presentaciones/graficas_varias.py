@@ -1,18 +1,25 @@
 import matplotlib.pyplot as plt
-x = ["peras", "manzanas", "plátanos"]
+x = ["Peras", "Manzanas", "Plátanos"]
 y1 = [1, 5, 3]
 y2 = [-4, 3, 6]
-#divide la pnatalla en 1 renglón, 2 columnas e inicio en el cuadrante 1
+
+#divide la pantalla en 1 renglón, 2 columnas e inicio en el cuadrante 1
 plt.subplot(121)
 plt.xlabel("Frutas")
 plt.ylabel("Cantidad")
 plt.title("Este mes")
-plt.plot(x, y1, "g*:")
-#divide la pnatalla en 1 renglón, 2 columnas e inicio en el cuadrante 2
+plt.plot(x, y1, "c*-") # Estrellas color cian unidas por raya continua
+
+#divide la pantalla en 1 renglón, 2 columnas e inicio en el cuadrante 2
 plt.subplot(122)
 plt.xlabel("Frutas")
 plt.ylabel("Cantidad")
 plt.title("Mes anterior")
-plt.plot(x, y2, "b<-")
-plt.show()
+plt.plot(x, y2, "rD:") #"rD:" Diamantes color rojo unidos por dos puntos :
+
+# Salva la gráfica con el nombre de Graficos.png
 plt.savefig("Graficos.png")
+
+# Muestra la gráfica
+plt.show()
+
