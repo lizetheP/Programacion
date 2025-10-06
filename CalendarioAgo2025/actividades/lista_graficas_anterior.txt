@@ -1,0 +1,171 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+import statistics
+
+# -------------------------------------------------------------------
+# --------- Estadística descriptiva ---------------------------------
+# -------------------------------------------------------------------
+
+pesos = [70, 69.5, 71, 69, 70, 68.5, 68]
+
+maximo = np.max(pesos)
+minimo = np.min(pesos)
+promedio = statistics.mean(pesos)
+mediana = statistics.median(pesos)
+moda = statistics.mode(pesos)
+desviacion = statistics.stdev(pesos)
+print("Máximo = %i" % maximo)
+print("Mínimo = %i" % minimo)
+print("Promedio = %.2f" % promedio)
+print("Mediana = %.2f" % mediana)
+print("Moda = %.2f" % moda)
+print("Desviación estándar = %.2f" % desviacion)
+
+# Guardar como estadistica_matrícula.py
+
+# -------------------------------------------------------------------
+# -------- Gráfica de barras simple ---------------------------------
+# -------------------------------------------------------------------
+
+# Librerías
+import matplotlib.pyplot as plt
+
+# Valores eje X
+paises = ["Estados unidos", "España", "México", "Rusia", "Japón"]
+
+# Valores eje Y
+ventas = [25, 32, 34, 20, 25]
+
+# Graficando
+plt.bar(paises, ventas)
+
+# Mostrando el gráfico
+plt.show()
+
+# Guardar como barras.py
+
+# -------------------------------------------------------------------
+# -------- Gráfica de barras con colores ----------------------------
+# -------------------------------------------------------------------
+
+# Librerías
+import matplotlib.pyplot as plt
+
+# Valores eje X
+paises = ["Estados unidos", "España", "México", "Rusia", "Japón"]
+
+# Valores eje Y
+ventas = [25, 32, 34, 20, 25]
+
+# Graficando
+barras = plt.bar(paises, ventas)
+
+# Colocando colores a las barras
+barras[0].set_color('b')
+barras[1].set_color('g')
+barras[2].set_color('r')
+barras[3].set_color('c')
+barras[4].set_color('m')
+
+# Mostrando el gráfico
+plt.show()
+
+# Guardar como barrascolor.py
+
+# -------------------------------------------------------------------
+# ---- Gráfica de línea simple con título y nombre de los ejes ------
+# -------------------------------------------------------------------
+
+# Librerías
+import matplotlib.pyplot as plt
+
+# Valores de los ejes
+ejex = ["SON", "BC", "NL", "JAL", "PUE", "CHIH"]
+ejey = [3, 2.3, 4, 4, 7, 5]
+
+# Título del gráfico
+plt.title("Promedio de calificación por estado")
+
+# Títulos de los ejes
+plt.xlabel("Estados")
+plt.ylabel("Promedio")
+
+# Graficando
+plt.plot(ejex, ejey)
+
+# Mostrando el gráfico
+plt.show()
+
+# Guardar como linea.py
+
+# -------------------------------------------------------------------
+# -------- Gráfica con dos líneas -----------------------------------
+# -------------------------------------------------------------------
+
+import matplotlib.pyplot as plt
+
+estados = ["Oaxaca", "Veracruz", "Puebla", "Chihuahua", "Chiapas", "Sonora"]
+contingencias = [1002, 271, 567, 288, 108, 211]
+emergencias = [5868, 5087, 1608, 1646, 1655, 1231]
+
+plt.title("Situaciones de emergencia y contingencia")
+plt.xlabel("Contingencias climatológicas")
+plt.ylabel("Emergencias / Desastres")
+
+#"g*-." Estrellas color verde unidas por raya y puntos alternados
+#"b>-" Flechas color azúl unidos por raya continua
+
+plt.plot(estados, contingencias, "g*-.", estados, emergencias, "b>-") 
+
+plt.legend(["Contingencias", "Emergencias"])
+
+#Rotación 45 grados de etiquetas en el eje x
+plt.xticks(rotation = 45)
+
+plt.show()
+# Guardar como doslineas.py
+
+# -------------------------------------------------------------------
+# -------- Varias gráficas en un tablero ----------------------------
+# -------------------------------------------------------------------
+
+import matplotlib.pyplot as plt
+x = ["Peras", "Manzanas", "Plátanos"]
+y1 = [1, 5, 3]
+y2 = [-4, 3, 6]
+
+#divide la pantalla en 1 renglón, 2 columnas e inicio en el cuadrante 1
+plt.subplot(121)
+plt.xlabel("Frutas")
+plt.ylabel("Cantidad")
+plt.title("Este mes")
+plt.plot(x, y1, "c*-") # Estrellas color cian unidas por raya continua
+
+#divide la pantalla en 1 renglón, 2 columnas e inicio en el cuadrante 2
+plt.subplot(122)
+plt.xlabel("Frutas")
+plt.ylabel("Cantidad")
+plt.title("Mes anterior")
+plt.plot(x, y2, "rD:") #"rD:" Diamantes color rojo unidos por dos puntos :
+
+# Salva la gráfica con el nombre de Graficos.png
+plt.savefig("Graficos.png")
+
+# Muestra la gráfica
+plt.show()
+
+# Guardar como graficas.py
+
+# -------------------------------------------------------------------
+# -------- Laboratorio ----------------------------------------------
+# -------------------------------------------------------------------
+
+meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre"]
+dolar = [20.45, 20.32, 19.94, 20.13, 19.49, 18.95, 18.81, 18.75, 18.36]
+euro =  [21.06, 21.32, 21.69, 22.73, 21.81, 21.87, 21.83, 21.95, 21.60]
+
+# Guardar como lab5_matrícula.py
+
+#https://wise.com/gb/currency-converter/usd-to-mxn-rate?amount=1000
+#https://wise.com/mx/currency-converter/eur-to-mxn-rate?amount=1000
