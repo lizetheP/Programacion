@@ -1474,48 +1474,127 @@ article {
 			 <li class="auto-style48">
 			 <font class="auto-style21" color="#333333" size="-1">
 			 <span class="auto-style26">La función</span>
-			 <span class="auto-style114"><strong>suma_productos (informe)</strong></span> 
+			 <span class="auto-style114"><strong>cantidad_productos (informe)</strong></span> 
 			 <span class="auto-style26">que reciba como parámetro de entrada el 
-			 tablero o dataframe. Guarda la información de la suma de la cantidad de 
-			 productos en existencia de la categoría de Condimento (<strong>categoria</strong>) en una lista 
-			 llamada <strong>cantidad</strong>. 
-			 La función deberá calcular la suma de la cantidad de productos en 
-			 existencia de la categoría de Condimento. 
-			 Imprime el resultado con el siguiente mensaje: "La cantidad de 
-			 productos en existencia de la categoria de condimento es: ".</span></font></li>
+			 tablero o dataframe. </span></font></li>
+	 </span>
+	 		<li class="auto-style48">
+			 <span class="auto-style97">
+	 		<font class="auto-style21" color="#333333" size="-1">
+			 <span class="auto-style26">Extrae una subtabla llamada <strong>
+			 reporteCondimentos</strong> con la información de la </span>
+			 <span class="auto-style113"><strong>categoría</strong></span><span class="auto-style26"> 
+			 de </span><span class="auto-style113"><strong>Condimento</strong></span><span class="auto-style26">. 
+			 Utiliza la función groupby: <strong>
+			 groupby("COLUMNA").get_group("valor")</strong></span></font></span></li>
+			 <li class="auto-style48">
+			 <span class="auto-style97">
+	 		<font class="auto-style21" color="#333333" size="-1">
+			 <span class="auto-style26">Guarda la información del nombre de los 
+			 productos (<strong>nombre</strong>) de la subtabla <strong>
+			 reporteCondimentos</strong> en una lista llamada <strong>nombres</strong>.</span></font></span></li>
+			 <li class="auto-style48">
+			 <span class="auto-style97">
+	 		<font class="auto-style21" color="#333333" size="-1">
+			 <span class="auto-style26">Guarda la información de la cantidad de 
+			 productos en existencia (<strong>cantidadExistencia</strong>) de la 
+			 subtabla <strong>reporteCondimentos</strong> en una lista llamada
+			 <strong>cantidad</strong>.</span></font></span></li>
+			 <li class="auto-style48">
+			 <span class="auto-style97">
+	 		<font class="auto-style21" color="#333333" size="-1">
+			 <span class="auto-style26">Crea un gráfico que muestre en el eje de 
+			 las x's el nombre de los productos (<strong>nombres</strong>) y en 
+			 el eje de las y's la cantidad de productos en existencia (<strong>cantidad</strong>). </span></font>
+			 <font color="#330033" face="Arial,Helvetica">
+			 <span class="auto-style26"><font face="Arial,Helvetica">
+			 <span class="auto-style45">
+			 <font color="#330033" face="Arial,Helvetica"><strong>&nbsp;</strong><ul class="auto-style117">
+				 <li class="auto-style97">Usa un gráfico de <strong>barras</strong>.</li>
+				 <li class="auto-style97">Coloca un título a la gráfica que 
+				  diga <strong>"Unidades vendidas de la categoría de 
+				 Condimentos"</strong> </li>
+				 <li class="auto-style97">Coloca una leyenda en el eje de 
+					 las x´s que diga "<strong>Productos</strong>"</li>
+				 <li class="auto-style97">Coloca una leyenda en el eje de 
+					 las y's que diga <strong>"Unidades vendidas". </strong>
+				 </li>
+				 <li class="auto-style97">Rota los nombre de los productos 90 
+				 grados en el eje de las x's:<strong> plt.xticks(rotation = 90)</strong></li>
+			 </ul>
+			 </font></span></font></span></font></li>
 		 </ul>
 	 </ul>
-	 </span>
-	 <class="auto-style49">
-	 		<class="auto-style49">
-	 		<class="auto-style49">
-	 <class="auto-style49">
-	 <class="auto-style49">
-	 <class="auto-style49">
-	 <ul>
-		 <ul>
-			 <li class="auto-style26"><font size="-1">
-			 <font class="auto-style21">La función
-			 <span class="auto-style114"><strong>grafica (informe)</strong></span><span class="auto-style75"> 
-			 que reciba como parámetro de entrada el tablero o dataframe.
+	 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	 <img alt="" height="401" src="img24.jpg" width="800"></p>
 	 <font color="#330033" face="Arial,Helvetica">
         <span class="auto-style26">
-             <font size="-1" face="Arial,Helvetica">
-			 Realiza una gráfica (mediante la librería matplotlib) que muestre 
-			 por tipo de envase el promedio de precio de menudeo de los 
-			 productos. Crea una lista con los distintos tipos de envase: 
-			 ["Frasco", "Sobre", "Botella", "Lata"]. [</font></span></font>Guarda la información de las fechas de los registros de los 
-			 precios de las acciones en una lista llamada <strong>fechas</strong>. 
-			 Guarda la información de otra columna que requieras para crear tu 
-			 gráfica en una lista, tú eliges qué criterio mostrarás en tu 
-			 gráfica. Como requisitos 
-			 mínimos, la gráfica deberá contener un título y las etiquetas 
-			 adecuadas. </span></font></font>
+          <font face="Arial,Helvetica"><span class="auto-style45">
+          <font color="#330033" face="Arial,Helvetica">
+	 <ul>
+		 <ul>
+			 <li class="auto-style48">
+			 <font class="auto-style21" color="#333333" size="-1">
+			 La función <span class="auto-style114"><strong>precio_productos (informe)</strong></span> 
+			 que reciba como parámetro de entrada el 
+			 tablero o dataframe. </font></li>
+			 <li class="auto-style48">
+			 <font class="auto-style21" color="#333333" size="-1">
+			 Extrae una subtabla llamada <strong>reporteFrascos</strong> con la 
+			 información del <span class="auto-style113"><strong>envase</strong></span> 
+			 de tipo <span class="auto-style113"><strong>Frasco</strong></span>. 
+			 Utiliza la función groupby: <strong>
+			 groupby("COLUMNA").get_group("valor")</strong></font></li>
+			 <li class="auto-style48">
+			 <font class="auto-style21" color="#333333" size="-1">
+			 Guarda la información del nombre de los productos (<strong>nombre</strong>) 
+			 de la subtabla <strong>reporteFrascos</strong> en una lista llamada
+			 <strong>nombres</strong>.</font></li>
+			 <li class="auto-style48">
+			 <font class="auto-style21" color="#333333" size="-1">
+			 Guarda la información del precio de menudeo (<strong>precioMenudeo</strong>) 
+			 de la subtabla <strong>reporteFrascos</strong> en una lista llamada
+			 <strong>precios</strong>.</font></li>
+			 <li class="auto-style48">
+			 <font class="auto-style21" color="#333333" size="-1">
+			 Crea un gráfico que muestre en el eje de las x's el nombre de los 
+			 productos (<strong>nombres</strong>) y en el eje de las y's los 
+			 precios de menudeo (<strong>precios</strong>)</font><ul class="auto-style117">
+				 <li class="auto-style97">Usa un gráfico de tipo <strong>línea
+				 </strong>con el color, tipo de intersección y tipo de línea de 
+				 tu preferencia.</li>
+				 <li class="auto-style97">Coloca un título a la gráfica que 
+				  diga <strong>"Precios de los productos del tipo de envase 
+				 Frasco"</strong> </li>
+				 <li class="auto-style97">Coloca una leyenda en el eje de 
+					 las x´s que diga "<strong>Productos</strong>"</li>
+				 <li class="auto-style97">Coloca una leyenda en el eje de 
+					 las y's que diga <strong>"Precios de menudeo". </strong></li>
+				 <li class="auto-style97">Rota los nombre de los productos 90 grados en el eje de las 
+				 x's:<strong> plt.xticks(rotation = 90)</strong></li>
+			 </ul>
 			 </li>
 		 </ul>
 	 </ul>
-	 <span class="auto-style97">
+	 </font>
+		 </span></font>
 	 </span>
+	 </font>
+	 <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	 <img alt="" height="387" src="img25.jpg" width="800"></p>
+	 </span>
+	 <class="auto-style49">
+	 		<class="auto-style49">
+	 		<class="auto-style49">
+	 <class="auto-style49">
+	 <class="auto-style49">
+	 <class="auto-style49">
+	 <class="auto-style49">
+	 		<class="auto-style49">
+	 		<class="auto-style49">
+	 	<class="auto-style49">
+	 	<class="auto-style49">
+	 	<class="auto-style49">
 	 <class="auto-style49">
 	 		<class="auto-style49">
 	 		<class="auto-style49">
@@ -1666,10 +1745,12 @@ article {
 			 <div>
 				 <blockquote class="auto-style45">
 					 <span class="auto-style45">
-					 <font size="-1"><strong>1. Cantidad máxima de transacciones</strong></font><strong><br class="auto-style21">
+					 <font size="-1"><strong>1. Cantidad de productos con 
+					 categoría de condimentos</strong></font><strong><br class="auto-style21">
 					 </strong>
 					 </span>
-					 <font size="-1"><strong>2. Gráfica</strong></font><strong><br class="auto-style21">
+					 <font size="-1"><strong>2. Precios de productos con envase 
+					 de Frasco</strong></font><strong><br class="auto-style21">
 					 </strong><font size="-1">
 					 <span class="auto-style129">
 					 <strong>3. Salir</strong></span></blockquote>
@@ -1717,9 +1798,6 @@ article {
 			 <li class="auto-style48"><font size="-1">
 			 <span class="auto-style26">En la función </span>
 			 <span class="auto-style114"><strong>main ()</strong></span><span class="auto-style26">:</span></font><ul>
-				 <li class="auto-style26">Realizar un tablero de visualización 
-				 que permita mostrar cómo afectó la pandemia a la empresa de 
-				 aerolíneas United. </li>
 				 <li class="auto-style26">Descarga el archivo
 				 <a href="inventario.xlsx"><strong>inventario.xlsx</strong></a>, 
 				 el cual contiene información del inventarios de los productos 
@@ -1751,7 +1829,7 @@ article {
 						 <li style="box-sizing: inherit;">Frasco</li>
 						 <li style="box-sizing: inherit;">Sobre</li>
 						 <li style="box-sizing: inherit;">Botella</li>
-						 <li style="box-sizing: inherit;">&nbsp;Lata</li>
+						 <li style="box-sizing: inherit;">Lata</li>
 					 </ul>
 					 </li>
 					 <li style="box-sizing: inherit;">
@@ -1807,7 +1885,7 @@ article {
           <span class="auto-style97">
 		     Guarda tu archivo como
 	 </span><span class="auto-style112">
-		     <strong>act6_matrícula.py</strong></span></font></p>
+		     <strong>act7_matrícula.py</strong></span></font></p>
 	 <class="auto-style49">
              <class="auto-style53">
 	 	 <class="auto-style49">
@@ -2098,9 +2176,9 @@ article {
 			 	 <li class="auto-style26">Formato de entrega: <strong>py</strong></li>
 			 <li class="auto-style6"><span class="auto-style26">Nombre de los entregables: 
 	 </span>
-	 		 <strong><span class="auto-style26">act6_matrícula</span></strong><span class="auto-style26"><strong>.py </strong>
+	 		 <strong><span class="auto-style26">act7_matrícula</span></strong><span class="auto-style26"><strong>.py </strong>
 	 			</li>
-			 <li class="auto-style6"><span class="auto-style26">Medio de entrega:&nbsp;Se entrega en la sección de&nbsp;<strong>Act6. 
+			 <li class="auto-style6"><span class="auto-style26">Medio de entrega:&nbsp;Se entrega en la sección de&nbsp;<strong>Act7. 
 			 Dataframes y gráficas</strong></span></li>
 		 </ul>
                                  
