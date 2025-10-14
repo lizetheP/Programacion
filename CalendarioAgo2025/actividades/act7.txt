@@ -3,20 +3,20 @@ import matplotlib.pyplot as plt
 
 def cantidad_productos(reporte):
     #groupby("COLUMNA").get_group("valor")
-    reporteCondimentos = 
-    print(reporteCondimentos)
+    #reporteCondimentos = 
+    #print(reporteCondimentos)
     
     plt.bar()
-    plt.title("Unidades vendidas de la categoría de Condimentos")
+    plt.title("Cantidad de productos en existencia de la categoría de Condimentos")
     plt.xlabel("Productos")
-    plt.ylabel("Unidades vendidas")
+    plt.ylabel("Cantidad de productos")
     plt.xticks(rotation = 90)
     plt.show()
     
 def precios_productos(reporte):
     #groupby("COLUMNA").get_group("valor")
-    reporteFrascos = 
-    print(reporteFrascos)
+    #reporteFrascos = 
+    #print(reporteFrascos)
     
     plt.plot()
     plt.title("Precios de los productos del tipo de envase Frasco")
@@ -41,7 +41,7 @@ def main():
         if opcion == 1:
             suma_productos(reporte)
         elif opcion == 2:
-            precios_productos_frasco(reporte)
+            precios_productos(reporte)
         elif opcion == 3:
             print("Adiós")
             continua = False
