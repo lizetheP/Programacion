@@ -32,26 +32,7 @@ def precios_productos(reporte):
     plt.ylabel("Precios de menudeo")
     plt.xticks(rotation = 90)
     plt.show()
-    
-def promedio_ventas_region(reporte):
-    regiones = ["SUR", "NORTE", "ESTE", "OESTE"]
-    promedio_ventas = []
-    for region in regiones:
-        reportexRegion = reporte.groupby("REGION").get_group(region)
-        ventasxRegion = reportexRegion["VENTAS TOTALES"]
-        promedio = ventasxRegion.mean()
-        promedio_ventas.append(promedio)
-    #print(promedio_ventas)
-    barlist = plt.bar(regiones, promedio_ventas)
-    barlist[0].set_color('r')
-    barlist[1].set_color('g')
-    barlist[2].set_color('b')
-    barlist[3].set_color('c')
-    plt.title("Promedio de ventas por region")
-    plt.xlabel("Regiones")
-    plt.ylabel("Promedio de ventas")
-    plt.show()
-      
+       
 def menu():
     print()
     print("1. Cantidad de productos")

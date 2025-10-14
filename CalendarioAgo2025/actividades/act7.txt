@@ -2,8 +2,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 def cantidad_productos(reporte):
-    #groupby("COLUMNA").get_group("valor")
-    #reporteCondimentos = 
+    #reporteCondimentos = reporte.groupby("COLUMNA").get_group("valor")
     #print(reporteCondimentos)
     
     plt.bar()
@@ -14,8 +13,7 @@ def cantidad_productos(reporte):
     plt.show()
     
 def precios_productos(reporte):
-    #groupby("COLUMNA").get_group("valor")
-    #reporteFrascos = 
+    #reporteFrascos = reporte.groupby("COLUMNA").get_group("valor")
     #print(reporteFrascos)
     
     plt.plot()
@@ -27,8 +25,8 @@ def precios_productos(reporte):
      
 def menu():
     print()
-    print("1. Unidades vendidas por vendedor en región ESTE")
-    print("2. Promedio de ventas por región")
+    print("1. Cantidad de productos")
+    print("2. Precio de productos")
     print("3. Salir")
     
 def main():
@@ -39,7 +37,7 @@ def main():
         menu()
         opcion = int(input("Dame una opción: "))
         if opcion == 1:
-            suma_productos(reporte)
+            cantidad_productos(reporte)
         elif opcion == 2:
             precios_productos(reporte)
         elif opcion == 3:
