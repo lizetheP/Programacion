@@ -1,0 +1,51 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+def cantidad_productos(reporte):
+    #groupby("COLUMNA").get_group("valor")
+    #reporteCondimentos = 
+    #print(reporteCondimentos)
+    
+    plt.bar()
+    plt.title("Unidades vendidas de la categoría de Condimentos")
+    plt.xlabel("Productos")
+    plt.ylabel("Unidades vendidas")
+    plt.xticks(rotation = 90)
+    plt.show()
+    
+def precios_productos(reporte):
+    #groupby("COLUMNA").get_group("valor")
+    #reporteFrascos = 
+    #print(reporteFrascos)
+    
+    plt.plot()
+    plt.title("Precios de los productos del tipo de envase Frasco")
+    plt.xlabel("Productos")
+    plt.ylabel("Precios de menudeo")
+    plt.xticks(rotation = 90)
+    plt.show()
+     
+def menu():
+    print()
+    print("1. Unidades vendidas por vendedor en región ESTE")
+    print("2. Promedio de ventas por región")
+    print("3. Salir")
+    
+def main():
+    reporte = pd.read_excel("inventario.xlsx")
+    print(reporte)
+    continua = True
+    while continua == True:
+        menu()
+        opcion = int(input("Dame una opción: "))
+        if opcion == 1:
+            suma_productos(reporte)
+        elif opcion == 2:
+            precios_productos_frasco(reporte)
+        elif opcion == 3:
+            print("Adiós")
+            continua = False
+        else:
+            print("Opción inválida")
+            
+main()
