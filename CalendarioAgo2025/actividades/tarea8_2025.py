@@ -56,7 +56,8 @@ def menu():
     print()
     print("1. Cantidad de productos")
     print("2. Precio de productos")
-    print("3. Salir")
+    print("3. Promedio de ventas por región")
+    print("4. Salir")
     
 def main():
     #print(reporte)
@@ -69,6 +70,8 @@ def main():
         elif opcion == 2:
             precios_productos(reporte)
         elif opcion == 3:
+            promedio_ventas_region(reporte)
+        elif opcion == 4:
             print("Adiós")
             continua = False
         else:

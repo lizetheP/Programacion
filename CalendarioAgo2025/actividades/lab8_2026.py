@@ -37,7 +37,9 @@ def promedio_ventas_region(reporte):
 
 def promedio_ventas_region2(reporte):
     #Por región, calcula el promedio de las ventas totales
-    grupo = reporte.groupby("REGION")["VENTAS TOTALES"].mean()
+    grupo = (reporte.groupby("REGION")["VENTAS TOTALES"]
+                                  .mean()
+                                  .sort_values())
     #Por región, calcula la suma de las ventas totales
     grupo2 = reporte.groupby("REGION")["VENTAS TOTALES"].sum()
     print(grupo)
